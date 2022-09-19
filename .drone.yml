@@ -1,0 +1,13 @@
+kind: pipeline
+type: kubernetes
+name: default
+
+workspace:
+  path: /drone/src
+
+steps:
+- name: build
+  image: l.gcr.io/google/bazel:latest
+  commands:
+  - mkdir -p /drone/output
+  - --output_user_root=/drone/output build

@@ -1,0 +1,12 @@
+{
+  "files.associations": {
+    "chrono": "c",
+    "system_error": "c",
+    "xlocale": "c",
+    "istream": "c",
+    "xlocmon": "c",
+    "locale": "c",
+    "regex": "c",
+    "xstring": "c"
+  }
+}

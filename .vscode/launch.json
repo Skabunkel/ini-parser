@@ -1,0 +1,35 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "debug ini parser",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\bazel-bin\\test.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}\\bazel-bin\\test.exe.runfiles",
+      "stopAtEntry": false,
+      "environment": [],
+      "Console": false,
+      "MIMode": "lldb",
+      "miDebuggerPath": "C:\\Program Files\\LLVM\\bin\\lldb.exe",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        },
+        {
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "Build main(debug)",
+      "sourceFileMap" : {"/proc/self/cwd/": "${workspaceFolder}"},
+    }
+  ]
+}
