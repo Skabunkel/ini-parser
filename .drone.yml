@@ -9,4 +9,4 @@ steps:
 - name: build
   image: l.gcr.io/google/bazel:latest
   commands:
-  - bazel build --output_user_root=/drone/output 
+  - "bazel build //:LibIni"
