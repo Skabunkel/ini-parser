@@ -9,4 +9,5 @@ steps:
 - name: build
   image: l.gcr.io/google/bazel:latest
   commands:
-  - "bazel build //:LibIni"
+  - clang --version
+  - "bazel build -s //:LibIni"
