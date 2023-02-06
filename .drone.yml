@@ -23,3 +23,5 @@ steps:
       from_secret: notification-username
     password:
       from_secret: notification-password
+    template:
+      from_secret: notification-template
