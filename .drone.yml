@@ -10,4 +10,16 @@ steps:
   image: l.gcr.io/google/bazel:latest
   commands:
   - clang --version
-  - "bazel build -s //:LibIni"
+  - "bazel build //:LibIni"
+
+- name: notification
+  image: plugins/matrix
+  settings:
+    homeserver:
+      from_secret: notification-server
+    roomid:
+      from_secret: notification-channel
+    username:
+      from_secret: notification-username
+    password:
+      from_secret: notification-password
